@@ -1,27 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-	
-</head>
-<body>
-		<h1>ToDo List</h1>
-		<form id="todoForm">
-				<input id="todoInput">
-				<button type="button" onclick="todoList()">Click Me</button>
-		</form>
+	<head>
+		<style>
+				
+				h1{
+					text-align: center;
+					background-color: cyan;
+					color: Red;
+				}
+				input {
+					width: 70%;
+					padding: 10px;
+					font-size: 16px;
+	  		}
+	  		.addbutton{
+					padding: 10px;
+			    width: 25%;
+			    background: black;
+			    color: white;
+			    text-align: center;
+			    font-size: 16px;    
+				}
+				.addbutton:hover {
+	  				background-color: Red;
+	  		}
+	  		ol{
+	  			margin: 10px;
+	  			padding: 0;
+	  		}
+	  		ul li {				    
+				   
+			    padding: 12px 8px 12px 40px;
+			    background: orange;
+			    font-size: 25px;
+				   
+				}
+				li:hover{
+					background: #808080;
+				}
+
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1>ToDo List</h1>
+			<form id="todoForm">
+					<input id="todoInput">
+					<button type="button" onclick="todoList()" class="addbutton">Click Me</button>
+			</form>
+		</div>
+		
 		<ol id="todoList">
 			
 		</ol>
 		<script type="text/javascript">
-				function todoList(){
-						var item=document.getElementById("todoInput").value;
-						var text=document.createTextNode(item);
-						var newItem=document.createElement("li");
-						newItem.appendChild(text);
-						document.getElementById("todoList").appendChild(newItem);
+			function todoList(){
+				var item=document.getElementById("todoInput").value;
+				var text=document.createTextNode(item);
+				var newItem=document.createElement("li");
+				newItem.appendChild(text);
+				document.getElementById("todoList").appendChild(newItem);
 
-				}
-			
+			}
+		
 		</script>
-</body>
+	</body>
 </html>
