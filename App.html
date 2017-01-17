@@ -9,7 +9,18 @@
 				<input id="todoInput">
 				<button type="button" onclick="todoList()">Click Me</button>
 		</form>
-		
+		<ol id="todoList">
+			
+		</ol>
+		<script type="text/javascript">
+				function todoList(){
+						var item=document.getElementById("todoInput").value;
+						var text=document.createTextNode(item);
+						var newItem=document.createElement("li");
+						newItem.appendChild(text);
+						document.getElementById("todoList").appendChild(newItem);
+
+				}
 			
 		</script>
 </body>
